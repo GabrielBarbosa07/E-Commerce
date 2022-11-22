@@ -2,32 +2,37 @@ import React from "react";
 import logo from "../../assets/images/logo.svg";
 
 const Search = () => {
+  window.addEventListener("scroll", () => {
+    const search = document.querySelector(".search");
+    search?.classList.toggle("active", window.scrollY > 100);
+  });
+
   return (
     <>
-    <section className='search'>
-      <div className='container c_flex'>
-        <div className='logo width '>
-          <img src={logo} alt='' />
-        </div>
+      <section className="search">
+        <div className="container c_flex">
+          <div className="logo width ">
+            <img src={logo} alt="" />
+          </div>
 
-        <div className='search-box f_flex'>
-          <i className='fa fa-search'></i>
-          <input type='text' placeholder='Busque por algum produto...' />
-          <span>All Category</span>
-        </div>
+          <div className="search-box f_flex">
+            <i className="fa fa-search"></i>
+            <input type="text" placeholder="Busque por algum produto..." />
+            <span>Categorias</span>
+          </div>
 
-        <div className='icon flex-end width'>
-          <i className='fa fa-user icon-circle'></i>
-          <div className='cart'>
-            <a href='/cart'>
-              <i className='fa fa-shopping-bag icon-circle'></i>
-            <span>0</span> 
-            </a>
+          <div className="icon flex-end width">
+            <i className="fa fa-user icon-circle"></i>
+            <div className="cart">
+              <a href="/cart">
+                <i className="fa fa-shopping-bag icon-circle"></i>
+                <span>0</span>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </>
+      </section>
+    </>
   );
 };
 
