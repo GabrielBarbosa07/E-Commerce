@@ -1,5 +1,6 @@
 import Categories from "./Categories";
 import Slider from "./Slider";
+import "./Home.css";
 
 const Home = () => {
   return (

@@ -20,6 +20,10 @@ body {
   margin: auto;
 }
 
+.f_flex {
+  display: flex;
+}
+
 .flex-end {
   display: flex;
   justify-content: flex-end;
@@ -96,25 +100,41 @@ button {
   margin-top: 5px;
 }
 
-.category img{
+.category img {
   width: 30px;
   height: 30px;
   margin-top: 10px;
   object-fit: contain;
 }
 
-.category span{
+.category span {
   margin: 10px 20px;
   text-transform: capitalize;
 }
 
-.category .box{
+.category .box {
   transition: 0.5s;
   padding: 0 20px;
 }
 
-.category .box:hover{
+.category .box:hover {
   background-color: #ffe1ef;
   cursor: pointer;
 }
 /*------------Category------------*/
+.btn-primary {
+  background-color: #e94560;
+  color: #fff;
+  padding: 13px 40px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.top {
+  margin-top: 80px;
+}
+
+.mtop {
+  margin-top: 40px;
+}
