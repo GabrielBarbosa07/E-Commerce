@@ -1,12 +1,11 @@
-import React from "react";
 import FlashDeals from "../components/FlashDeals/FlashDeals";
 import Home from "../components/MainPage/Home";
 
-const Pages = () => {
+const Pages = ({ productItems }: any) => {
   return (
     <>
       <Home />
-      <FlashDeals />
+      <FlashDeals productItems={productItems} />
     </>
   );
 };

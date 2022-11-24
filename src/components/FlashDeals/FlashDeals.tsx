@@ -1,6 +1,18 @@
 import FlashCard from "./FlashCard";
 
-const FlashDeals = () => {
+ interface ProductItemsProps {
+  id: number;
+  discount: number;
+  cover: string;
+  name: string;
+  price: number;
+}
+
+interface FlashDealsProps{
+  productItems: ProductItemsProps
+}
+
+const FlashDeals = ({ productItems }:FlashDealsProps) => {
   return (
     <>
       <section className="flash background">
@@ -9,7 +21,7 @@ const FlashDeals = () => {
             <i className="fa fa-bolt"></i>
             <h1>Flash Deals</h1>
           </div>
-          <FlashCard />
+          <FlashCard productItems={productItems} />
         </div>
       </section>
     </>
