@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+:root{
+  --white: #fff
+
+  --red-500: #e94560
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -6,7 +13,7 @@
 }
 
 body {
-  background-color: #fff;
+  background-color: var(--white);
   font-family: "Poppins", sans-serif;
 }
 
@@ -123,8 +130,8 @@ button {
 }
 /*------------Category------------*/
 .btn-primary {
-  background-color: #e94560;
-  color: #fff;
+  background-color: var(--red-500);
+  color: var(--white);
   padding: 13px 40px;
   font-weight: bold;
   border-radius: 5px;
@@ -137,4 +144,9 @@ button {
 
 .mtop {
   margin-top: 40px;
+}
+
+.heading i {
+  color: var(--red-500);
+  margin: 10px;
 }
