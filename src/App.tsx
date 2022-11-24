@@ -8,7 +8,19 @@ import { useState } from "react";
 function App() {
   const { productItems } = Data;
 
-  const [cartItem, setCartItem] = useState([]);
+  const [cartItem, setCartItem] = useState<any>([]);
+
+  const addToCart = (product:any) => {
+   
+    const productExit = cartItem.find((item:any) => item.id === product.id)
+
+    if (productExit) {
+      setCartItem(cartItem.map((item:any) => (item.id === product.id ? { ...productExit, qty: productExit.qty + 1 } : item)))
+    } else {
+    
+      setCartItem([...cartItem, { ...product, qty: 1 }])
+    }
+  }
 
   return (
     <>
@@ -16,7 +28,7 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/">
-            <Pages productItems={productItems} />
+            <Pages productItems={productItems} addToCart={addToCart} />
           </Route>
         </Switch>
       </Router>

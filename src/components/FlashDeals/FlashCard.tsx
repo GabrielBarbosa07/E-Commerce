@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Slider from "react-slick";
 
 interface ProductItemsProps {
@@ -28,6 +29,11 @@ const PrevArrow = ({ onClick }: any) => {
 };
 
 const FlashCard = ({ productItems }: any) => {
+  const [count, setCount] = useState(0);
+  const incrementCount = () => {
+    setCount(count + 1);
+  };
+
   const settings = {
     dots: false,
     infinite: true,
@@ -42,7 +48,7 @@ const FlashCard = ({ productItems }: any) => {
   return (
     <>
       <Slider {...settings}>
-        {productItems.map((productItem: ProductItemsProps) => {
+        {productItems.map((productItem: ProductItemsProps, addToCart:any) => {
           return (
             <div className="box">
               <div className="product mtop">
@@ -51,8 +57,11 @@ const FlashCard = ({ productItems }: any) => {
                   <img src={productItem.cover} alt="" />
 
                   <div className="product-like">
-                    <label>0</label> <br />
-                    <i className="fa-regular fa-heart"></i>
+                    <label>{count}</label> <br />
+                    <i
+                      className="fa-regular fa-heart"
+                      onClick={incrementCount}
+                    ></i>
                   </div>
                 </div>
 
@@ -68,7 +77,7 @@ const FlashCard = ({ productItems }: any) => {
 
                   <div className="price">
                     <h4>{productItem.price}.00</h4>
-                    <button>
+                    <button onClick={() => addToCart(productItem)}>
                       <i className="fa fa-plus"></i>
                     </button>
                   </div>
