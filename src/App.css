@@ -141,7 +141,7 @@ button {
 }
 
 .top {
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .mtop {
@@ -161,6 +161,14 @@ button {
   border-radius: 8px;
   box-shadow: rgb(3 0 71 / 9%) 0 1px 3px;
   margin: 10px;
+}
+
+.product .img img {
+  height: 300px;
+  max-height: 300px;
+  width: 90%;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .product h3 {
