@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../assets/images/logo.svg";
-
-const Search = () => {
+//Melhorar a tipagem depois
+const Search = ({ cartItem }:any) => {
   window.addEventListener("scroll", () => {
     const search = document.querySelector(".search");
     search?.classList.toggle("active", window.scrollY > 100);
@@ -24,9 +24,9 @@ const Search = () => {
           <div className="icon flex-end width">
             <i className="fa fa-user icon-circle"></i>
             <div className="cart">
-              <a href="/cart">
+              <a href="/carrinho">
                 <i className="fa fa-shopping-bag icon-circle"></i>
-                <span>0</span>
+                <span>{cartItem.length === 0 ? 0 : cartItem.length}</span>
               </a>
             </div>
           </div>

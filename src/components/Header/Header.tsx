@@ -2,12 +2,12 @@ import "./Header.css"
 import Head from "./Head";
 import NavBar from "./NavBar";
 import Search from "./Search";
-
-const Header = () => {
+//Melhorar a tipagem depois
+const Header = ({cartItem}:any) => {
   return (
     <>
       <Head />
-      <Search />
+      <Search cartItem={cartItem} />
       <NavBar />
     </>
   );

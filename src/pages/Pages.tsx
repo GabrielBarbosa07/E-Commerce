@@ -1,11 +1,11 @@
 import FlashDeals from "../components/FlashDeals/FlashDeals";
 import Home from "../components/MainPage/Home";
 
-const Pages = ({ productItems }: any) => {
+const Pages = ({ productItems, cartItem, addToCart }: any) => {
   return (
     <>
-      <Home />
-      <FlashDeals productItems={productItems} />
+      <Home cartItem={cartItem} />
+      <FlashDeals productItems={productItems} addToCart={addToCart}/>
     </>
   );
 };

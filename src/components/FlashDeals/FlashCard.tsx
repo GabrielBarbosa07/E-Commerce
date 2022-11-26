@@ -2,10 +2,12 @@ import { useState } from "react";
 import Slider from "react-slick";
 
 interface ProductItemsProps {
+  id: number;
   discount: number;
   cover: string;
   name: string;
   price: number;
+  count: number;
 }
 
 const NextArrow = ({ onClick }: any) => {
@@ -30,8 +32,24 @@ const PrevArrow = ({ onClick }: any) => {
 
 const FlashCard = ({ productItems }: any) => {
   const [count, setCount] = useState(0);
-  const incrementCount = () => {
-    setCount(count + 1);
+
+ 
+
+
+  const incrementCount = (e: any) => {
+    const iParent = e.target.parentNode;
+
+    console.log(iParent.firstChild.textContent++);
+
+   
+
+    // const products = productItems.filter((item) =>{
+    //   if( item.id === e.target.parentNode.dataset.index){
+    //     return item
+    //   }
+    // });
+    // console.log(products)
+    
   };
 
   const settings = {
@@ -48,16 +66,20 @@ const FlashCard = ({ productItems }: any) => {
   return (
     <>
       <Slider {...settings}>
-        {productItems.map((productItem: ProductItemsProps, addToCart:any) => {
+        {productItems.map((productItem: ProductItemsProps, addToCart: any) => {
           return (
-            <div className="box">
+            <div
+              className="box"
+              key={productItem.id}
+              
+            >
               <div className="product mtop">
                 <div className="img">
                   <span className="discount">{productItem.discount} % Off</span>
                   <img src={productItem.cover} alt="" />
 
-                  <div className="product-like">
-                    <label>{count}</label> <br />
+                  <div className="product-like" data-index={productItem.id}>
+                    <label>{productItem.count}</label> <br />
                     <i
                       className="fa-regular fa-heart"
                       onClick={incrementCount}
