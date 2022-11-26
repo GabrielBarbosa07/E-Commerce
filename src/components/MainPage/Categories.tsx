@@ -1,47 +1,58 @@
+import fashion from "../../assets/images/categoryIcons/fashion.png";
+import eletronic from "../../assets/images/categoryIcons/eletronic.png";
+import car from "../../assets/images/categoryIcons/car.png";
+import HomeAndGarden from "../../assets/images/categoryIcons/home_garden.png";
+import gift from "../../assets/images/categoryIcons/gift.png";
+import music from "../../assets/images/categoryIcons/music.png";
+import healthAndBeauty from "../../assets/images/categoryIcons/health_beauty.png";
+import pets from "../../assets/images/categoryIcons/pets.png";
+import babyToys from "../../assets/images/categoryIcons/baby_toys.png";
+import groceries from "../../assets/images/categoryIcons/groceries.png";
+import books from "../../assets/images/categoryIcons/books.png";
 const Categories = () => {
   const data = [
     {
-      cateImg: "./images/category/cat1.png",
+      cateImg: fashion,
       cateName: "Fashion",
     },
     {
-      cateImg: "./images/category/cat2.png",
+      cateImg: eletronic,
       cateName: "Eletrônico",
     },
     {
-      cateImg: "./images/category/cat3.png",
+      cateImg: car,
       cateName: "Carros",
     },
     {
-      cateImg: "./images/category/cat4.png",
+      cateImg: HomeAndGarden,
       cateName: "Casa & Jardim",
     },
     {
-      cateImg: "./images/category/cat5.png",
+      cateImg: gift,
       cateName: "Presente",
     },
     {
-      cateImg: "./images/category/cat6.png",
+      cateImg: music,
       cateName: "Música",
     },
     {
-      cateImg: "./images/category/cat7.png",
+      cateImg: healthAndBeauty,
       cateName: "Saúde & Beleza",
     },
     {
-      cateImg: "./images/category/cat8.png",
+      cateImg: pets,
       cateName: "Pets",
     },
     {
-      cateImg: "./images/category/cat9.png",
+      cateImg: babyToys,
       cateName: "Brinquedos para bebê",
     },
     {
-      cateImg: "./images/category/cat10.png",
+      cateImg: groceries,
       cateName: "Mantimentos",
     },
     {
-      cateImg: "./images/category/cat11.png",
+      cateImg: books,
       cateName: "Livros",
     },
   ];

@@ -33,15 +33,10 @@ const PrevArrow = ({ onClick }: any) => {
 const FlashCard = ({ productItems }: any) => {
   const [count, setCount] = useState(0);
 
- 
-
-
   const incrementCount = (e: any) => {
     const iParent = e.target.parentNode;
-
-    console.log(iParent.firstChild.textContent++);
-
-   
+    iParent.firstChild.textContent++
+  
 
     // const products = productItems.filter((item) =>{
     //   if( item.id === e.target.parentNode.dataset.index){
