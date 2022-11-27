@@ -230,6 +230,7 @@ button {
 
 .i-red{
   color: var(--red-500);
+  font-weight: bold;
 }
 
 .product:hover .product-like {

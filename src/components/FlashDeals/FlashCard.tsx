@@ -29,7 +29,7 @@ const PrevArrow = ({ onClick }: any) => {
   );
 };
 
-const FlashCard = ({ productItems }: any) => {
+const FlashCard = ({ productItems, addToCart }: any) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -44,7 +44,7 @@ const FlashCard = ({ productItems }: any) => {
   return (
     <>
       <Slider {...settings}>
-        {productItems.map((productItem: ProductItemsProps, addToCart: any) => {
+        {productItems.map((productItem: ProductItemsProps) => {
           return (
             <div className="box" key={productItem.id}>
               <div className="product mtop">
