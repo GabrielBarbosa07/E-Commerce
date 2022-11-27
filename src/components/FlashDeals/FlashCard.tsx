@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Slider from "react-slick";
 
 interface ProductItemsProps {
@@ -31,22 +30,6 @@ const PrevArrow = ({ onClick }: any) => {
 };
 
 const FlashCard = ({ productItems }: any) => {
-  const [count, setCount] = useState(0);
-
-  const incrementCount = (e: any) => {
-    const iParent = e.target.parentNode;
-    iParent.firstChild.textContent++
-  
-
-    // const products = productItems.filter((item) =>{
-    //   if( item.id === e.target.parentNode.dataset.index){
-    //     return item
-    //   }
-    // });
-    // console.log(products)
-    
-  };
-
   const settings = {
     dots: false,
     infinite: true,
@@ -63,11 +46,7 @@ const FlashCard = ({ productItems }: any) => {
       <Slider {...settings}>
         {productItems.map((productItem: ProductItemsProps, addToCart: any) => {
           return (
-            <div
-              className="box"
-              key={productItem.id}
-              
-            >
+            <div className="box" key={productItem.id}>
               <div className="product mtop">
                 <div className="img">
                   <span className="discount">{productItem.discount} % Off</span>
@@ -77,7 +56,20 @@ const FlashCard = ({ productItems }: any) => {
                     <label>{productItem.count}</label> <br />
                     <i
                       className="fa-regular fa-heart"
-                      onClick={incrementCount}
+                      onClick={(e: any) => {
+                        const iParent = e.target.parentNode;
+
+                        const currentTarget = e.currentTarget;
+                        const firstChild = iParent.firstChild;
+
+                        currentTarget.classList.toggle("i-red");
+
+                        if (currentTarget.classList.contains("i-red")) {
+                          firstChild.textContent = productItem.count + 1;
+                        } else {
+                          firstChild.textContent = productItem.count;
+                        }
+                      }}
                     ></i>
                   </div>
                 </div>

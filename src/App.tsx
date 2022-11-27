@@ -29,14 +29,10 @@ function App() {
   return (
     <>
       <Router>
-        <Header cartItem={cartItem}/>
+        <Header cartItem={cartItem} />
         <Switch>
           <Route exact path="/">
-            <Pages
-              productItems={productItems}
-              addToCart={addToCart}
-              
-            />
+            <Pages productItems={productItems} addToCart={addToCart} />
           </Route>
           <Route exact path="/carrinho">
             <Cart cartItem={cartItem} addToCart={addToCart} />

@@ -212,6 +212,7 @@ button {
   margin: 10px;
   opacity: 0;
   transition: 0.5s;
+  font-weight: bold;
 }
 
 .product-like label {
@@ -225,6 +226,10 @@ button {
 .product-like i {
   font-size: 20px;
   margin: 10px 3px;
+}
+
+.i-red{
+  color: var(--red-500);
 }
 
 .product:hover .product-like {

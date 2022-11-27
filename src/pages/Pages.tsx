@@ -1,10 +1,10 @@
 import FlashDeals from "../components/FlashDeals/FlashDeals";
 import Home from "../components/MainPage/Home";
 
-const Pages = ({ productItems, cartItem, addToCart }: any) => {
+const Pages = ({ productItems, addToCart }: any) => {
   return (
     <>
-      <Home cartItem={cartItem} />
+      <Home  />
       <FlashDeals productItems={productItems} addToCart={addToCart}/>
     </>
   );

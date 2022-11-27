@@ -9,6 +9,7 @@ import pets from "../../assets/images/categoryIcons/pets.png";
 import babyToys from "../../assets/images/categoryIcons/baby_toys.png";
 import groceries from "../../assets/images/categoryIcons/groceries.png";
 import books from "../../assets/images/categoryIcons/books.png";
+
 const Categories = () => {
   const data = [
     {
