@@ -1,41 +1,58 @@
 import "./App.css";
-import Header from "./components/Header/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import Header from "./components/Header/Header";
 import Pages from "./pages/Pages";
 import { Data } from "./components/FlashDeals/Data";
-import { useState } from "react";
 import Cart from "./components/Cart/Cart";
+
+interface CartItemProps {
+  id: number;
+  discount: number;
+  cover: string;
+  name: string;
+  price: number;
+}
+
+export interface CartProps extends CartItemProps {
+  product?: CartItemProps;
+  cartItems?: CartItemProps;
+  qty: number;
+}
 
 function App() {
   const { productItems } = Data;
-  const [cartItem, setCartItem] = useState<any>([]);
 
-  const addToCart = (product: any) => {
-    const productExit = cartItem.find((item: any) => item.id === product.id);
+  const [cartItems, setCartItem] = useState<CartProps[]>([]);
+
+  const addToCart = (product: CartProps) => {
+    const productExit = cartItems.find(
+      (item: CartItemProps) => item.id === product.id
+    );
 
     if (productExit) {
       setCartItem(
-        cartItem.map((item: any) =>
+        cartItems.map((item: CartProps) =>
           item.id === product.id
-            ? { ...productExit, qty: productExit.qty + 1 }
-            : item
+            ? { ...item, qty: item.qty + 1 }
+            : { ...item, qty: item.qty }
         )
       );
     } else {
-      setCartItem([...cartItem, { ...product, qty: 1 }]);
+      setCartItem([...cartItems, { ...product, qty: 1 }]);
     }
   };
 
   return (
     <>
       <Router>
-        <Header cartItem={cartItem} />
+        <Header cartItems={cartItems} />
         <Switch>
           <Route exact path="/">
             <Pages productItems={productItems} addToCart={addToCart} />
           </Route>
           <Route exact path="/carrinho">
-            <Cart cartItem={cartItem} addToCart={addToCart} />
+            <Cart cartItems={cartItems} addToCart={addToCart} />
           </Route>
         </Switch>
       </Router>

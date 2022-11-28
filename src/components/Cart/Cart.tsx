@@ -1,5 +1,5 @@
 //Melhorar a tipagem depois
-const Cart = ({ cartItem, addToCart }:any) => {
+const Cart = ({ cartItem }:any) => {
   return (
     <section className="cart-items">
       <div className="container d_flex">
@@ -11,7 +11,7 @@ const Cart = ({ cartItem, addToCart }:any) => {
           )}
 
           {cartItem.map((item:any) => {
-            const productQty = item.price * item.productQty;
+            // const productQty = item.price * item.productQty;
 
             return (
               <div className="cart-list product d_flex">

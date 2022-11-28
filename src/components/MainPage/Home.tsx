@@ -2,10 +2,11 @@ import Categories from "./Categories";
 import Slider from "./Slider";
 import "./Home.css";
 
-const Home = ({cartItem}:any) => {
+const Home = () => {
   return (
     <>
-      <section className="home" {...cartItem}>
+      <section className="home" >
+        
         <div className="container d_flex mtop">
           <Categories />
           <Slider />

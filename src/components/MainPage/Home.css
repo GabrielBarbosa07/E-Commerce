@@ -23,6 +23,7 @@
 .homeSlide ul li button {
   background: transparent !important;
   color: transparent !important;
+  cursor: pointer;
 }
 
 .homeSlide ul li button::before {

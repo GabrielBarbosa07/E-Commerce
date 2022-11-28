@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 
-interface ProductItemsProps {
+export interface ProductItemsProps {
   id: number;
   discount: number;
   cover: string;
