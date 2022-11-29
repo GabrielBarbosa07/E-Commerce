@@ -1,31 +1,32 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { useContext, useEffect, useState } from "react";
+import { useState } from "react";
 import Header from "./components/Header/Header";
 import Pages from "./pages/Pages";
 import { Data } from "./components/FlashDeals/Data";
 import Cart from "./components/Cart/Cart";
 
-interface CartItemProps {
+export interface CartItemProps {
   id: number;
   discount: number;
   cover: string;
   name: string;
   price: number;
+  qty: number;
 }
 
 export interface CartProps extends CartItemProps {
   product?: CartItemProps;
-  cartItems?: CartItemProps;
-  qty: number;
+  cartItems?: CartItemProps[];
+  decreaseQty?: any;
+  addToCart?: any | void;
 }
 
 function App() {
   const { productItems } = Data;
-
   const [cartItems, setCartItem] = useState<CartProps[]>([]);
 
-  const addToCart = (product: CartProps) => {
+  const addToCart = (product: CartItemProps) => {
     const productExit = cartItems.find(
       (item: CartItemProps) => item.id === product.id
     );
@@ -52,7 +53,16 @@ function App() {
             <Pages productItems={productItems} addToCart={addToCart} />
           </Route>
           <Route exact path="/carrinho">
-            <Cart cartItems={cartItems} addToCart={addToCart} />
+            <Cart
+              cartItems={cartItems}
+              addToCart={addToCart}
+              id={0}
+              discount={0}
+              cover={""}
+              name={""}
+              price={0}
+              qty={0}
+            />
           </Route>
         </Switch>
       </Router>
