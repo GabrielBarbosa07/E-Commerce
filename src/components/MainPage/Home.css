@@ -1,21 +1,21 @@
 .home {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .homeSlide h1 {
-  font-size: 45px;
+  font-size: 2.813rem;
 }
 .homeSlide p {
-  margin: 20px 0;
+  margin: 1.25rem 0;
 }
 
 .homeSlide ul {
   position: absolute;
-  bottom: 20px;
+  bottom: 1.25rem;
 }
 
 .homeSlide ul li {
-  border: 2px solid #b8b7b7;
+  border: 0.125rem solid #b8b7b7;
   border-radius: 100%;
   padding: 10px;
 }
@@ -27,10 +27,10 @@
 }
 
 .homeSlide ul li button::before {
-  font-size: 19px;
+  font-size: 1.188rem;
   color: #0f3460;
   position: absolute;
-  top: 2px;
+  top: 0.125rem;
   left: 0;
   margin: auto;
 }
