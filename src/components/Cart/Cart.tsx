@@ -1,16 +1,16 @@
 //Melhorar a tipagem depois
-const Cart = ({ cartItem }:any) => {
+const Cart = ({ cartItems }:any) => {
   return (
     <section className="cart-items">
       <div className="container d_flex">
         <div className="cart_details">
-          {cartItem.length === 0 && (
+          {cartItems.length === 0 && (
             <h1 className="no-items product">
               Nenhum item foi adicionado ao carrinho
             </h1>
           )}
 
-          {cartItem.map((item:any) => {
+          {cartItems.map((item:any) => {
             // const productQty = item.price * item.productQty;
 
             return (

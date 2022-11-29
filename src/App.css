@@ -21,7 +21,7 @@ body {
 
 .background {
   background-color: #f6f9fc;
-  padding: 50px 0;
+  padding: 3.125rem 0;
 }
 
 .container {
@@ -82,17 +82,17 @@ button {
 }
 
 .icon-circle {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
+  line-height: 3.125rem;
   background-color: #f3f5f9;
-  margin-left: 20px;
+  margin-left: 1.25rem;
   text-align: center;
   border-radius: 50%;
 }
 
 .boxShadow {
-  box-shadow: rgba(43 52 69 / 10%) 0 4px 16px;
+  box-shadow: rgba(43 52 69 / 10%) 0 0.25rem 1rem;
 }
 
 /*------------Category------------*/
@@ -103,27 +103,27 @@ button {
 .category {
   width: 23%;
   box-shadow: rgba(43 52 69 / 10%) 0 4px 16px;
-  height: 510px;
-  padding: 15px 0;
-  border-radius: 5px;
-  margin-top: 5px;
+  height: 31.875rem;
+  padding: 0.938rem 0;
+  border-radius: 0.313rem;
+  margin-top: 0.313rem;
 }
 
 .category img {
-  width: 30px;
-  height: 30px;
-  margin-top: 10px;
+  width: 1.875rem;
+  height: 1.875rem;
+  margin-top: 0.625rem;
   object-fit: contain;
 }
 
 .category span {
-  margin: 10px 20px;
+  margin: 0.625rem 1.25rem;
   text-transform: capitalize;
 }
 
 .category .box {
   transition: 0.5s;
-  padding: 0 20px;
+  padding: 0 1.25rem;
 }
 
 .category .box:hover {
@@ -134,38 +134,38 @@ button {
 .btn-primary {
   background-color: var(--red-500);
   color: var(--white);
-  padding: 13px 40px;
+  padding: 0.813rem 1.25rem;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 0.313rem;
   cursor: pointer;
 }
 
 .top {
-  margin-top: 50px;
+  margin-top: 3.125rem;
 }
 
 .mtop {
-  margin-top: 40px;
+  margin-top: 2.5rem;
 }
 
 .heading i {
   color: var(--red-500);
-  margin: 10px;
+  margin: 0.625rem;
 }
 
 /*------------Product------------*/
 .product {
   background-color: var(--white);
-  padding: 20px;
+  padding: 1.25rem;
   position: relative;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   box-shadow: rgb(3 0 71 / 9%) 0 1px 3px;
-  margin: 10px;
+  margin: 0.625rem;
 }
 
 .product .img img {
-  height: 300px;
-  max-height: 300px;
+  height: 18.75rem;
+  max-height: 18.75rem;
   width: 90%;
   max-width: 100%;
   object-fit: contain;
@@ -173,13 +173,13 @@ button {
 
 .product h3 {
   font-weight: 400;
-  font-size: 17px;
+  font-size: 1.063rem;
 }
 
 .product .rate i {
-  font-size: 15px;
+  font-size: 0.938rem;
   color: #ffcd4e;
-  margin: 5px 5px 5px 0;
+  margin: 0.313rem 0.313rem 0.313rem 0;
 }
 
 .product .price {
@@ -191,11 +191,11 @@ button {
 .product button {
   background: none;
   color: var(--red-500);
-  font-size: 20px;
+  font-size: 1.25rem;
   border: 1px solid rgb(3 0 71 / 9%);
-  width: 35px;
-  height: 35px;
-  border-radius: 5px;
+  width: 2.188rem;
+  height: 2.188rem;
+  border-radius: 0.313rem;
   transition: 0.5s;
 }
 
@@ -209,7 +209,7 @@ button {
   position: absolute;
   top: 0;
   right: 0;
-  margin: 10px;
+  margin: 0.625rem;
   opacity: 0;
   transition: 0.5s;
   font-weight: bold;
@@ -218,14 +218,14 @@ button {
 .product-like label {
   background-color: var(--blue-500);
   color: var(--white);
-  padding: 1px 10px;
-  font-size: 12px;
-  border-radius: 50px;
+  padding: 0.063rem 0.625rem;
+  font-size: 0.75rem;
+  border-radius: 3.125rem;
 }
 
 .product-like i {
-  font-size: 20px;
-  margin: 10px 3px;
+  font-size: 1.25rem;
+  margin: 0.625rem 0.188rem;
 }
 
 .i-red{
@@ -243,9 +243,9 @@ button {
 .control-btn .prev {
   position: absolute;
   top: 40%;
-  width: 50px;
-  height: 50px;
-  line-height: 60px;
+  width: 3.125rem;
+  height: 3.125rem;
+  line-height: 3.75rem;
   background-color: var(--blue-500);
   border-radius: 50%;
   transition: 0.5s;
@@ -254,16 +254,16 @@ button {
 }
 
 .control-btn .prev {
-  left: -20px;
+  left: -1.25rem;
 }
 
 .control-btn .next {
-  right: -20px;
+  right: -1.25rem;
 }
 
 .control-btn .next i,
 .control-btn .prev i {
-  font-size: 20px;
+  font-size: 1.25rem;
   transition: 0.5s;
   color: var(--white);
   display: flex;
