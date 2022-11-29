@@ -44,6 +44,22 @@ function App() {
     }
   };
 
+  const decreaseQty = (product: CartItemProps) => {
+    const productExit = cartItems.find(
+      (item: CartItemProps) => item.id === product.id
+    );
+
+    if (productExit?.qty === 1) {
+      setCartItem(cartItems.filter((item) => item.id !== product.id));
+    } else {
+      setCartItem(
+        cartItems.map((item) =>
+          item.id === product.id ? { ...item, qty: item.qty - 1 } : item
+        )
+      );
+    }
+  };
+
   return (
     <>
       <Router>
@@ -56,6 +72,7 @@ function App() {
             <Cart
               cartItems={cartItems}
               addToCart={addToCart}
+              decreaseQty={decreaseQty}
               id={0}
               discount={0}
               cover={""}

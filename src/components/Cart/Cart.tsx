@@ -32,7 +32,7 @@ const Cart = ({ cartItems, addToCart, decreaseQty }: CartProps) => {
                 </div>
                 <div className="cart-items-function">
                   <div className="removeCart">
-                    <button className="removeCart">
+                    <button>
                       <i className="fa-solid fa-xmark"></i>
                     </button>
                   </div>
