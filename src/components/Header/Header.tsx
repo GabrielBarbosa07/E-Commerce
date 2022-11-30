@@ -3,11 +3,12 @@ import Head from "./Head";
 import NavBar from "./NavBar";
 import Search from "./Search";
 //Melhorar a tipagem depois
-const Header = ({cartItems}:any) => {
+const Header = () => {
+ 
   return (
     <>
       <Head />
-      <Search cartItem={cartItems} />
+      <Search />
       <NavBar />
     </>
   );

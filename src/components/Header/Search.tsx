@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.svg";
+import { CartContext } from "../../contexts/CartContext/CartContext";
 //Melhorar a tipagem depois
-const Search = ({ cartItem }:any) => {
+const Search = () => {
+  const { cartItems } = useContext(CartContext);
+
   window.addEventListener("scroll", () => {
     const search = document.querySelector(".search");
     search?.classList.toggle("active", window.scrollY > 100);
@@ -24,10 +28,10 @@ const Search = ({ cartItem }:any) => {
           <div className="icon flex-end width">
             <i className="fa fa-user icon-circle"></i>
             <div className="cart">
-              <a href="/carrinho">
+              <Link to="/carrinho">
                 <i className="fa fa-shopping-bag icon-circle"></i>
-                <span>{cartItem.length === 0 ? 0 : cartItem.length}</span>
-              </a>
+                <span>{cartItems.length}</span>
+              </Link>
             </div>
           </div>
         </div>

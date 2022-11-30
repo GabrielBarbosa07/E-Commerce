@@ -1,8 +1,14 @@
+import { useContext } from "react";
+import {
+  CartContext,
+  CartItemProps,
+} from "../../contexts/CartContext/CartContext";
 import "./Cart.css";
-import { CartItemProps, CartProps } from "../../App";
 
-const Cart = ({ cartItems, addToCart, decreaseQty }: CartProps) => {
-  const totalPrice = cartItems?.reduce(
+const Cart = () => {
+  const { addToCart, decreaseQty, cartItems } = useContext(CartContext);
+
+  const totalPrice = cartItems.reduce(
     (price, item) => price + item.qty * item.price,
     0
   );
@@ -11,11 +17,11 @@ const Cart = ({ cartItems, addToCart, decreaseQty }: CartProps) => {
     <section className="cart-items">
       <div className="container d_flex">
         <div className="cart-details">
-          {cartItems?.length === 0 && (
+          {cartItems.length === 0 && (
             <h1 className="no-items product">Nenhum produto foi adicionado!</h1>
           )}
 
-          {cartItems?.map((item: CartItemProps) => {
+          {cartItems.map((item: CartItemProps) => {
             const productQty = item.price * item.qty;
 
             return (

@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import Slider from "react-slick";
+import { CartContext } from "../../contexts/CartContext/CartContext";
 
 export interface ProductItemsProps {
   id: number;
@@ -7,6 +9,7 @@ export interface ProductItemsProps {
   name: string;
   price: number;
   count: number;
+  qty: number;
 }
 
 const NextArrow = ({ onClick }: any) => {
@@ -29,7 +32,9 @@ const PrevArrow = ({ onClick }: any) => {
   );
 };
 
-const FlashCard = ({ productItems, addToCart }: any) => {
+const FlashCard = ({ productItems }: any) => {
+  const {addToCart} = useContext(CartContext)
+
   const settings = {
     dots: false,
     infinite: true,
@@ -91,6 +96,7 @@ const FlashCard = ({ productItems, addToCart }: any) => {
                     </button>
                   </div>
                 </div>
+                
               </div>
             </div>
           );

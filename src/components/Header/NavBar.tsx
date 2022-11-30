@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [MobileMenu, setMobileMenu] = useState(false);
@@ -22,22 +23,22 @@ const NavBar = () => {
               onClick={() => setMobileMenu(false)}
             >
               <li>
-                <a href="/">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="/pages">Paginas</a>
+                <Link to="/pages">Paginas</Link>
               </li>
               <li>
-                <a href="/user">Conta do usuário</a>
+                <Link to="/user">Conta do usuário</Link>
               </li>
               <li>
-                <a href="/vendor">Conta do fornecedor</a>
+                <Link to="/vendor">Conta do fornecedor</Link>
               </li>
               <li>
-                <a href="/track">Acompanhar meu pedido</a>
+                <Link to="/track">Acompanhar meu pedido</Link>
               </li>
               <li>
-                <a href="/contact">Contato</a>
+                <Link to="/contact">Contato</Link>
               </li>
             </ul>
 
