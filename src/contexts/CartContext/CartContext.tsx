@@ -62,39 +62,17 @@ export const CartProvider = ({ children }: any) => {
       );
     }
   };
-  console.log(cartItems);
 
   useEffect(() => {
     let newCartItems = JSON.parse(localStorage.getItem("CartItems") ?? "");
-    console.log(`Get ${newCartItems}`);
     setCartItem(newCartItems);
-    console.log(`Get after ${newCartItems}`);
   }, []);
 
   useEffect(() => {
-    console.log(`Set ${cartItems}`);
-    localStorage.setItem("CartItems", JSON.stringify(cartItems) ?? []);
-    
-    console.log(`Set after ${cartItems}`);
+    if (document.readyState === "complete") {
+      localStorage.setItem("CartItems", JSON.stringify(cartItems) ?? []);
+    }
   }, [cartItems]);
-
-  // // Quando carrega
-  // useEffect(() => {
-  //   let newCartItems = JSON.parse(localStorage.getItem("CartItems") ?? `${[]}`);
-
-  //   setCartItem(newCartItems);
-  //   console.log("Get", newCartItems);
-  //   console.log("localStorage on get", localStorage.getItem("CartItems"));
-  // }, []);
-
-  // // Quando "descarrega"
-  // useUnmount(() => {
-  //   console.log("cartItems", cartItems);
-  //   localStorage.setItem("CartItems", JSON.stringify(cartItems) ?? []);
-  //   console.log("localStorage on set", localStorage.getItem("CartItems"));
-  // });
-
-  // console.log(cartItems);
 
   return (
     <CartContext.Provider value={{ addToCart, cartItems, decreaseQty }}>
