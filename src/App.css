@@ -130,6 +130,18 @@ button {
   background-color: #ffe1ef;
   cursor: pointer;
 }
+
+.discount {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--red-500);
+  color: var(--white);
+  padding: 0.188rem 0.625rem;
+  font-size: 0.75rem;
+  border-radius: 50px;
+  margin: 0.625rem;
+}
 /*------------Category------------*/
 .btn-primary {
   background-color: var(--red-500);
@@ -163,10 +175,14 @@ button {
   margin: 0.625rem;
 }
 
+.product .img {
+  padding: 2rem;
+}
+
 .product .img img {
   height: 18.75rem;
   max-height: 18.75rem;
-  width: 90%;
+  width: 100%;
   max-width: 100%;
   object-fit: contain;
 }
@@ -228,7 +244,7 @@ button {
   margin: 0.625rem 0.188rem;
 }
 
-.i-red{
+.i-red {
   color: var(--red-500);
   font-weight: bold;
 }
