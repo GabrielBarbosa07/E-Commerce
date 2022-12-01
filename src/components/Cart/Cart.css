@@ -6,6 +6,105 @@
 }
 
 .cart-items {
+  background: #f6f9fc;
+  height: auto;
+  gap: 1rem;
+}
+
+.cart-items .cart-details {
+  width: 70%;
+}
+
+.cart-items .cart-total {
+  width: 30%;
+  margin-top: 1.875rem;
+  margin-left: 1.875rem;
+  height: 8.125rem;
+}
+.cart-list {
+  background-color: var(--white);
+  margin-top: 1.875rem;
+  gap: 1rem;
+}
+.cart-items .img {
+  width: 9rem;
+  height: 9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart-items img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cart-items .cart-details h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 1.25rem;
+}
+.cart-items .cart-details h4 {
+  font-size: 0.938rem;
+  font-weight: 400;
+  margin-top: 3.125rem;
+  color: gray;
+}
+.cart-items h4 span {
+  color: var(--red-500);
+  margin-left: 0px;
+  font-weight: bold;
+}
+.removeCart {
+  background-color: none;
+  font-size: 1.563rem;
+  text-align: right;
+  margin-right: 0.625rem;
+}
+.cartControl {
+  margin-top: 3.125rem;
+}
+.cartControl button {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: 0.625rem;
+  border-radius: 5px;
+  font-size: 1.25rem;
+}
+.incCart {
+  background-color: none;
+  border: 1px solid rgb(3 0 71 / 9%);
+  color: var(--red-500);
+}
+.desCart {
+  background-color: var(--white-600);
+}
+.cart-total h4 {
+  font-size: 0.938rem;
+  font-weight: 400;
+}
+.cart-total h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--red-500);
+}
+.cart-total h2 {
+  font-size: 1.125rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid rgb(3 0 71 / 9%);
+  padding-bottom: 0.625rem;
+  color: var(--red-500);
+}
+.no-items {
+  display: flex;
+  align-items: center;
+  color: var(--red-500);
+  font-size: 1.125rem;
+  margin-top: 1.875rem;
+  height: 8.125rem;
+}
+
+/* 
+.cart-items {
   background-color: #f6f9fc;
   height: auto;
   padding: 3.125rem 0;
@@ -25,11 +124,15 @@
 .cart-list {
   background-color: var(--white);
   margin-top: 1.875rem;
+  gap: 1rem;
 }
 
 .cart-items .img {
-  width: 9.375rem;
-  height: 9.375rem;
+  width: 9rem;
+  height: 9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cart-items img {
@@ -106,4 +209,4 @@
     font-size: 1.125rem;
     margin-top: 1.875rem;
     height: 8.125rem;
-}
+} */

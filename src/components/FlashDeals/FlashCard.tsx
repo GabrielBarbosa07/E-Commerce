@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import Slider from "react-slick";
 import { CartContext } from "../../contexts/CartContext/CartContext";
 
@@ -33,7 +33,8 @@ const PrevArrow = ({ onClick }: any) => {
 };
 
 const FlashCard = ({ productItems }: any) => {
-  const {addToCart} = useContext(CartContext)
+  const { addToCart } = useContext(CartContext);
+  // const [likedIcon, setLikedIcon] = useState([]);
 
   const settings = {
     dots: false,
@@ -67,12 +68,16 @@ const FlashCard = ({ productItems }: any) => {
                         const currentTarget = e.currentTarget;
                         const firstChild = iParent.firstChild;
 
+                        // console.log(iParent.dataset.index);
+
                         currentTarget.classList.toggle("i-red");
 
                         if (currentTarget.classList.contains("i-red")) {
-                          firstChild.textContent = productItem.count + 1;
+                          // const productLikedId = iParent.dataset.index;
+
+                          firstChild.innerText = productItem.count + 1;
                         } else {
-                          firstChild.textContent = productItem.count;
+                          firstChild.innerText = productItem.count;
                         }
                       }}
                     ></i>
@@ -96,7 +101,6 @@ const FlashCard = ({ productItems }: any) => {
                     </button>
                   </div>
                 </div>
-                
               </div>
             </div>
           );

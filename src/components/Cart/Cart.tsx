@@ -32,13 +32,13 @@ const Cart = () => {
                 <div className="cart-details">
                   <h3>{item.name}</h3>
                   <h4>
-                    R${item.price}.00 * {item.qty}
-                    <span>R${productQty}.00</span>
+                    R${item.price}.00 x {item.qty} =
+                    <span> R${productQty}.00</span>
                   </h4>
                 </div>
                 <div className="cart-items-function">
                   <div className="removeCart">
-                    <button>
+                    <button >
                       <i className="fa-solid fa-xmark"></i>
                     </button>
                   </div>
