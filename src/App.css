@@ -295,10 +295,10 @@ button {
 /*------------Control-btn------------*/
 /*----- heading -------*/
 .heading .heading-left i {
-  font-size: 30px;
+  font-size: 1.875rem;
 }
 .heading .heading-left h2 {
-  font-size: 25px;
+  font-size: 1.563rem;
   margin: 5px;
 }
 .heading .heading-right i,

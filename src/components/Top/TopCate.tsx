@@ -1,4 +1,4 @@
-import React from "react";
+import TopCart from "./TopCart";
 
 const TopCate = () => {
   return (
@@ -17,6 +17,7 @@ const TopCate = () => {
                 <i className="fa fa-caret-right"></i>
             </div>
           </div>
+          <TopCart/>
         </div>
       </section>
     </>
