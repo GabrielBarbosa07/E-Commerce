@@ -2,8 +2,16 @@
 
 :root {
   --white: #fff;
+  --white-500: #f3f5f9;
+  --white-600: #f6f9fc;
+  --white-700: #ffe1ef;
+
+  --grey-500: #b8b7b7;
+
+  --yellow-500: #ffcd4e;
 
   --red-500: #e94560;
+  --red-700: #ff014f;
 
   --blue-500: #0f3460;
 }
@@ -20,7 +28,7 @@ body {
 }
 
 .background {
-  background-color: #f6f9fc;
+  background-color: var(--white-600);
   padding: 3.125rem 0;
 }
 
@@ -85,7 +93,7 @@ button {
   width: 3.125rem;
   height: 3.125rem;
   line-height: 3.125rem;
-  background-color: #f3f5f9;
+  background-color: var(--white-500);
   margin-left: 1.25rem;
   text-align: center;
   border-radius: 50%;
@@ -127,7 +135,7 @@ button {
 }
 
 .category .box:hover {
-  background-color: #ffe1ef;
+  background-color: var(--white-700);
   cursor: pointer;
 }
 
@@ -194,7 +202,7 @@ button {
 
 .product .rate i {
   font-size: 0.938rem;
-  color: #ffcd4e;
+  color: var(--yellow-500);
   margin: 0.313rem 0.313rem 0.313rem 0;
 }
 

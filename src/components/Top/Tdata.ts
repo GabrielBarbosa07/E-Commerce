@@ -1,27 +1,27 @@
 const Tdata = [
     {
         cover: "",
-        para: "headphone",
+        name: "headphone",
         desc: "3k de pedidos nesta semana",
     },
     {
         cover: "",
-        para: "watch",
+        name: "watch",
         desc: "4k de pedidos nesta semana",
     },
     {
         cover: "",
-        para: "sunglass",
+        name: "sunglass",
         desc: "6k de pedidos nesta semana",
     },
     {
         cover: "",
-        para: "watch",
+        name: "watch",
         desc: "4k de pedidos nesta semana",
     },
     {
         cover: "",
-        para: "sunglass",
+        name: "sunglass",
         desc: "6k de pedidos nesta semana",
     },
 ]

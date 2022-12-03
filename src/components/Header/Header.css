@@ -1,13 +1,6 @@
-:root {
-  --white: #fff;
-
-  --red-500: #e94560;
-  --red-700: #ff014f;
-}
-
 /*------------head------------*/
 .head {
-  background-color: #0f3460;
+  background-color: var(--blue-500);
   padding: 0.625rem 0;
   color: var(--white);
 }
@@ -82,7 +75,7 @@
 
 /*------------Search------------*/
 .categories {
-  background-color: #f6f9fc;
+  background-color: var(--white-600);
   padding: 0px 1.875rem;
   border-radius: 5px;
   height: 6vh;
@@ -174,7 +167,7 @@ header ul li a:hover {
     position: absolute;
     top: 2.188rem;
     right: 1.25rem;
-    color: #ff014f;
+    color: var(--red-700);
     display: block;
     font-size: 1.563rem;
     z-index: 999;
@@ -183,7 +176,7 @@ header ul li a:hover {
   .open {
     top: 26%;
     right: 1.875rem;
-    background-color: #e94560;
+    background-color: var(--red-500);
     color: var(--white);
   }
 
@@ -192,7 +185,7 @@ header ul li a:hover {
   }
 
   .close .home-btn {
-    color: #ff014f;
+    color: var(--red-700);
     background: linear-gradient(145deg, #e2e8ec, var(--white));
     border-radius: 50%;
     padding: 0;

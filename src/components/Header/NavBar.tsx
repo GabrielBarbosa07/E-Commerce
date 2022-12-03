@@ -26,19 +26,19 @@ const NavBar = () => {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/pages">Paginas</Link>
+                <Link to="/paginas">Paginas</Link>
               </li>
               <li>
-                <Link to="/user">Conta do usuário</Link>
+                <Link to="/usuario">Conta do usuário</Link>
               </li>
               <li>
-                <Link to="/vendor">Conta do fornecedor</Link>
+                <Link to="/fornecedor">Conta do fornecedor</Link>
               </li>
               <li>
-                <Link to="/track">Acompanhar meu pedido</Link>
+                <Link to="/acompanhar">Acompanhar meu pedido</Link>
               </li>
               <li>
-                <Link to="/contact">Contato</Link>
+                <Link to="/contato">Contato</Link>
               </li>
             </ul>
 

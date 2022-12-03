@@ -15,7 +15,7 @@
 }
 
 .homeSlide ul li {
-  border: 0.125rem solid #b8b7b7;
+  border: 0.125rem solid var(--grey-500);
   border-radius: 100%;
   padding: 10px;
 }
@@ -28,7 +28,7 @@
 
 .homeSlide ul li button::before {
   font-size: 1.188rem;
-  color: #0f3460;
+  color: var(--blue-500);
   position: absolute;
   top: 0.125rem;
   left: 0;

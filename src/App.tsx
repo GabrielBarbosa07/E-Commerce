@@ -4,27 +4,22 @@ import Header from "./components/Header/Header";
 import Pages from "./pages/Pages";
 import { Data } from "./components/FlashDeals/Data";
 import Cart from "./components/Cart/Cart";
-import { useContext } from "react";
 import { CartProvider } from "./contexts/CartContext/CartContext";
 
 function App() {
   const { productItems } = Data;
 
-
- 
-
   return (
     <>
       <CartProvider>
         <Router>
-          <Header  />
+          <Header />
           <Switch>
             <Route exact path="/">
               <Pages productItems={productItems} />
             </Route>
             <Route exact path="/carrinho">
-              <Cart              // decreaseQty={decreaseQty}
-              />
+              <Cart />
             </Route>
           </Switch>
         </Router>
