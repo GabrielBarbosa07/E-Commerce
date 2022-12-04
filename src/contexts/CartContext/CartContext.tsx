@@ -10,8 +10,8 @@ export interface CartItemProps {
 }
 
 export interface CartProps extends CartItemProps {
-  product?: CartItemProps;
-  decreaseQty?: any;
+  product?: CartItemProps[];
+  decreaseQty?: (product: CartItemProps) => void;
 }
 
 interface addToCartContext {
