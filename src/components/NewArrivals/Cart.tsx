@@ -3,7 +3,6 @@ import Ndata from "./Ndata";
 const Cart = () => {
   return (
     <>
-      <>
         <div className="content grid product">
           {Ndata.map(({ cover, name, price }, index) => {
             return (
@@ -18,7 +17,6 @@ const Cart = () => {
           })}
         </div>
       </>
-    </>
   );
 };
 
