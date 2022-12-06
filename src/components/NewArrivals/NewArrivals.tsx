@@ -1,3 +1,4 @@
+import Cart from "./Cart";
 import "./NewArrivals.css";
 
 const NewArrivals = () => {
@@ -16,7 +17,7 @@ const NewArrivals = () => {
             </div>
           </div>
 
-          {/* <Cart /> */}
+           <Cart /> 
         </div>
       </section>
     </>
