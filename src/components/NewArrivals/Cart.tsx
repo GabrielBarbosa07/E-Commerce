@@ -11,7 +11,7 @@ const Cart = () => {
                   <img src={cover} alt="" />
                 </div>
                 <h4>{name}</h4>
-                <span>${price}</span>
+                <span>R$ {price}</span>
               </div>
             );
           })}

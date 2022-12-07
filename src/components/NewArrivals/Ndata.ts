@@ -4,6 +4,7 @@ import OculosDeSol from "./assets/oculosDeSol.jpg"
 import Batom from "./assets/batom.jpg"
 import Planta from "./assets/planta.jpg"
 import Arvore from "./assets/arvore.jpg"
+
 const Ndata = [
     {
         cover: OculosDeSol,

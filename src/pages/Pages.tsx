@@ -1,3 +1,4 @@
+import Discount from "../components/Discount/Discount";
 import FlashDeals from "../components/FlashDeals/FlashDeals";
 import Home from "../components/MainPage/Home";
 import NewArrivals from "../components/NewArrivals/NewArrivals";
@@ -10,6 +11,7 @@ const Pages = ({ productItems }: any) => {
       <FlashDeals productItems={productItems} />
       <TopCate />
       <NewArrivals />
+      <Discount />
     </>
   );
 };
