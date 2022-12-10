@@ -2,11 +2,11 @@ import { createContext, useEffect, useState } from "react";
 
 export interface CartItemProps {
   id: number;
-  discount: number;
+  discount?: number;
   cover: string;
   name: string;
   price: number;
-  qty: number;
+  qty: number | 0;
 }
 
 export interface CartProps extends CartItemProps {
@@ -38,8 +38,8 @@ export const CartProvider = ({ children }: any) => {
       setCartItem(
         cartItems.map((item: CartItemProps) =>
           item.id === product.id
-            ? { ...item, qty: item.qty + 1 }
-            : { ...item, qty: item.qty }
+            ? { ...item, qty: item?.qty + 1 }
+            : { ...item, qty: item?.qty }
         )
       );
     } else {

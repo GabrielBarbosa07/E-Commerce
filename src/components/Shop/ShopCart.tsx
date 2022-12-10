@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { CartContext } from "../../contexts/CartContext/CartContext";
 import Sdata from "./Sdata";
 
@@ -35,7 +35,7 @@ const ShopCart = () => {
                   <i className="fa fa-star"></i>
                 </div>
                 <div className="price">
-                  <h4>${price}.00 </h4>
+                  <h4>R${price}.00 </h4>
 
                   <button onClick={() => addToCart(shopItems)}>
                     <i className="fa fa-plus"></i>
