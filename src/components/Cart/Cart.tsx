@@ -6,10 +6,11 @@ import {
 import "./Cart.css";
 
 const Cart = () => {
-  const { addToCart, decreaseQty, cartItems } = useContext(CartContext);
+  const { addToCart, decreaseQty, cartItems, removeFromCart } =
+    useContext(CartContext);
 
   const totalPrice = cartItems.reduce(
-    (price, item) => price + item.qty * item.price,
+    (price, item) => price + item.qty * Number(item.price),
     0
   );
 
@@ -22,7 +23,7 @@ const Cart = () => {
           )}
 
           {cartItems.map((item: CartItemProps) => {
-            const productQty = item.price * item.qty;
+            const productQty = item.qty * Number(item.price);
 
             return (
               <div className="cart-list product d_flex" key={item.id}>
@@ -38,7 +39,7 @@ const Cart = () => {
                 </div>
                 <div className="cart-items-function">
                   <div className="removeCart">
-                    <button >
+                    <button onClick={() => removeFromCart(item)}>
                       <i className="fa-solid fa-xmark"></i>
                     </button>
                   </div>
