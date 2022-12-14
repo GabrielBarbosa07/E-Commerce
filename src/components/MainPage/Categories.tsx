@@ -1,14 +1,14 @@
-import fashion from "../../assets/images/categoryIcons/fashion.png";
-import eletronic from "../../assets/images/categoryIcons/eletronic.png";
-import car from "../../assets/images/categoryIcons/car.png";
-import HomeAndGarden from "../../assets/images/categoryIcons/home_garden.png";
-import gift from "../../assets/images/categoryIcons/gift.png";
-import music from "../../assets/images/categoryIcons/music.png";
-import healthAndBeauty from "../../assets/images/categoryIcons/health_beauty.png";
-import pets from "../../assets/images/categoryIcons/pets.png";
-import babyToys from "../../assets/images/categoryIcons/baby_toys.png";
-import groceries from "../../assets/images/categoryIcons/groceries.png";
-import books from "../../assets/images/categoryIcons/books.png";
+import fashion from "/assets/images/categoryIcons/fashion.png";
+import eletronic from "/assets/images/categoryIcons/eletronic.png";
+import car from "/assets/images/categoryIcons/car.png";
+import HomeAndGarden from "/assets/images/categoryIcons/home_garden.png";
+import gift from "/assets/images/categoryIcons/gift.png";
+import music from "/assets/images/categoryIcons/music.png";
+import healthAndBeauty from "/assets/images/categoryIcons/health_beauty.png";
+import pets from "/assets/images/categoryIcons/pets.png";
+import babyToys from "/assets/images/categoryIcons/baby_toys.png";
+import groceries from "/assets/images/categoryIcons/groceries.png";
+import books from "/assets/images/categoryIcons/books.png";
 
 const Categories = () => {
   const data = [

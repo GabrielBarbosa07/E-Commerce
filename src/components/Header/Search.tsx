@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/logo.svg";
+import logo from "/assets/images/logo.svg";
 import { CartContext } from "../../contexts/CartContext/CartContext";
 //Melhorar a tipagem depois
 const Search = () => {

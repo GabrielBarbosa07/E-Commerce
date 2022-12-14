@@ -11,7 +11,7 @@ const Shop = () => {
 
           <div className="contentWidth">
             <div className="heading d_flex">
-              <div className="heading-left row  f_flex">
+              <div className="heading-left row f_flex">
                 <h2>Smartphones</h2>
               </div>
               <div className="heading-right row ">
@@ -19,7 +19,7 @@ const Shop = () => {
                 <i className="fa-solid fa-caret-right"></i>
               </div>
             </div>
-            <div className="product-content  grid1">
+            <div className="product-content grid1">
               <ShopCart />
             </div>
           </div>
