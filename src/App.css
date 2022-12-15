@@ -28,8 +28,11 @@ body {
 }
 
 .background {
-  background-color: var(--white-600);
   padding: 3.125rem 0;
+}
+
+.bg-none {
+  background-color: none;
 }
 
 .container {

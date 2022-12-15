@@ -13,23 +13,21 @@ const Dcard = () => {
     autoplay: true,
   };
   return (
-    <>
-      <Slider {...settings}>
-        {Ddata.map((value, index) => {
-          return (
-            <div className="product" key={value.cover}>
-              <div className="box">
-                <div className="img">
-                  <img src={value.cover} alt="" width="100%" />
-                </div>
-                <h4>{value.name}</h4>
-                <span>{value.price}</span>
+    <Slider {...settings}>
+      {Ddata.map(({ cover, name, price }) => {
+        return (
+          <div className="product" key={cover}>
+            <div className="box">
+              <div className="img">
+                <img src={cover} alt="" width="100%" />
               </div>
+              <h4>{name}</h4>
+              <span>{price}</span>
             </div>
-          );
-        })}
-      </Slider>
-    </>
+          </div>
+        );
+      })}
+    </Slider>
   );
 };
 

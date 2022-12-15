@@ -4,7 +4,7 @@ import "./NewArrivals.css";
 const NewArrivals = () => {
   return (
     <>
-      <section className="NewArrivals background">
+      <section className="NewArrivals bg-none">
         <div className="container">
           <div className="heading d_flex">
             <div className="heading-left row f_flex">

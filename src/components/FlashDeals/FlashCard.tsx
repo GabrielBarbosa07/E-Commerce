@@ -34,7 +34,6 @@ const PrevArrow = ({ onClick }: any) => {
 
 const FlashCard = ({ productItems }: any) => {
   const { addToCart } = useContext(CartContext);
-  // const [likedIcon, setLikedIcon] = useState([]);
 
   const settings = {
     dots: false,
@@ -48,65 +47,59 @@ const FlashCard = ({ productItems }: any) => {
   };
 
   return (
-    <>
-      <Slider {...settings}>
-        {productItems.map((productItem: ProductItemsProps) => {
-          return (
-            <div className="box" key={productItem.id}>
-              <div className="product mtop">
-                <div className="img">
-                  <span className="discount">{productItem.discount} % Off</span>
-                  <img src={productItem.cover} alt="" />
+    <Slider {...settings}>
+      {productItems.map((productItem: ProductItemsProps) => {
+        return (
+          <div className="box" key={productItem.id}>
+            <div className="product mtop">
+              <div className="img">
+                <span className="discount">{productItem.discount} % Off</span>
+                <img src={productItem.cover} alt="" />
 
-                  <div className="product-like" data-index={productItem.id}>
-                    <label>{productItem.count}</label> <br />
-                    <i
-                      className="fa-regular fa-heart"
-                      onClick={(e: any) => {
-                        const iParent = e.target.parentNode;
+                <div className="product-like" data-index={productItem.id}>
+                  <label>{productItem.count}</label> <br />
+                  <i
+                    className="fa-regular fa-heart"
+                    onClick={(e: any) => {
+                      const iParent = e.target.parentNode;
 
-                        const currentTarget = e.currentTarget;
-                        const firstChild = iParent.firstChild;
+                      const currentTarget = e.currentTarget;
+                      const firstChild = iParent.firstChild;
 
-                        // console.log(iParent.dataset.index);
+                      currentTarget.classList.toggle("i-red");
 
-                        currentTarget.classList.toggle("i-red");
+                      if (currentTarget.classList.contains("i-red")) {
+                        firstChild.innerText = productItem.count + 1;
+                      } else {
+                        firstChild.innerText = productItem.count;
+                      }
+                    }}
+                  ></i>
+                </div>
+              </div>
 
-                        if (currentTarget.classList.contains("i-red")) {
-                          // const productLikedId = iParent.dataset.index;
-
-                          firstChild.innerText = productItem.count + 1;
-                        } else {
-                          firstChild.innerText = productItem.count;
-                        }
-                      }}
-                    ></i>
-                  </div>
+              <div className="product-details">
+                <h3>{productItem.name}</h3>
+                <div className="rate">
+                  <i className="fa fa-star"></i>
+                  <i className="fa fa-star"></i>
+                  <i className="fa fa-star"></i>
+                  <i className="fa fa-star"></i>
+                  <i className="fa fa-star"></i>
                 </div>
 
-                <div className="product-details">
-                  <h3>{productItem.name}</h3>
-                  <div className="rate">
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                    <i className="fa fa-star"></i>
-                  </div>
-
-                  <div className="price">
-                    <h4>{productItem.price}.00</h4>
-                    <button onClick={() => addToCart(productItem)}>
-                      <i className="fa fa-plus"></i>
-                    </button>
-                  </div>
+                <div className="price">
+                  <h4>{productItem.price}.00</h4>
+                  <button onClick={() => addToCart(productItem)}>
+                    <i className="fa fa-plus"></i>
+                  </button>
                 </div>
               </div>
             </div>
-          );
-        })}
-      </Slider>
-    </>
+          </div>
+        );
+      })}
+    </Slider>
   );
 };
 

@@ -13,23 +13,21 @@ const TopCart = () => {
     autoplay: true,
   };
   return (
-    <>
-      <Slider {...settings}>
-        {Tdata.map(({ name, desc, cover }, index) => {
-          return (
-            <div className="box product" key={cover}>
-              <div className="nametop d_flex">
-                <span className="tleft">{name}</span>
-                <span className="tright">{desc}</span>
-              </div>
-              <div className="img">
-                <img src={cover} alt="" />
-              </div>
+    <Slider {...settings}>
+      {Tdata.map(({ name, desc, cover }) => {
+        return (
+          <div className="box product" key={cover}>
+            <div className="nametop d_flex">
+              <span className="tleft">{name}</span>
+              <span className="tright">{desc}</span>
             </div>
-          );
-        })}
-      </Slider>
-    </>
+            <div className="img">
+              <img src={cover} alt={name} />
+            </div>
+          </div>
+        );
+      })}
+    </Slider>
   );
 };
 

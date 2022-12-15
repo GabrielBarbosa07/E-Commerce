@@ -3,19 +3,13 @@ import { CartContext } from "../../contexts/CartContext/CartContext";
 import Sdata from "./Sdata";
 
 const ShopCart = () => {
-  const [count, setCount] = useState(0);
   const { addToCart } = useContext(CartContext);
   const { shopItems } = Sdata;
-
-  const increment = () => {
-    setCount(count + 1);
-    
-  };
 
   return (
     <>
       {shopItems.map((shopItem) => {
-        const { name, price, id, cover, discount, qty } = shopItem;
+        const { name, price, id, cover, discount, count } = shopItem;
 
         return (
           <div className="box" key={id}>
@@ -31,13 +25,10 @@ const ShopCart = () => {
                     const currentTarget = e.currentTarget;
                     const firstChild = iParent.firstChild;
               
-                    // console.log(iParent.dataset.index);
-              
                     currentTarget.classList.toggle("i-red");
               
                     if (currentTarget.classList.contains("i-red")) {
                       // const productLikedId = iParent.dataset.index;
-              
                       firstChild.innerText = shopItem.count + 1;
                     } else {
                       firstChild.innerText = shopItem.count;
